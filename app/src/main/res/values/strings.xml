@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Day3</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="countButton">еще одна ворона</string>
+</resources>
