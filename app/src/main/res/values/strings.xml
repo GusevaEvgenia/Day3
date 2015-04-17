@@ -14,4 +14,13 @@
     <string name="size_summary">Устанавливает новый размер шрифта</string>
     <string name="size_default">14</string>
     <string name="size_dialog_title">Введите размер шрифта (от 10 до 32)</string>
+
+
+    <string name="pref_style">pref_style</string>
+    <string name="style_title">Стиль для шрифта</string>
+    <string name="style_summary">Устанавливает стиль для шрифта</string>
+    <string name="style_default">1</string>
+    <string name="style_dialog_title">Выберите стиль для шрифта</string>
+
+
 </resources>

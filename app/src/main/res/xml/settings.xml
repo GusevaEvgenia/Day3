@@ -16,5 +16,13 @@
         android:summary="@string/size_summary"
         android:defaultValue="@string/size_default"
         android:dialogTitle="@string/size_dialog_title"/>
+    <ListPreference
+        android:key="@string/pref_style"
+        android:title="@string/style_title"
+        android:summary="@string/style_summary"
+        android:defaultValue="@string/style_default"
+        android:entries="@array/text_style"
+        android:entryValues="@array/text_style"
+        android:dialogTitle="@string/style_dialog_title"/>
 
 </PreferenceScreen>
