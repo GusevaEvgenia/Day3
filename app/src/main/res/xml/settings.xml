@@ -32,4 +32,10 @@
         android:switchTextOff="Нет"
         android:switchTextOn="Да" />
 
+    <RingtonePreference
+        android:key="setting_ringtone"
+        android:title="Рингтон"
+        android:showDefault="true"
+        android:showSilent="true"
+        android:summary="Устанавливает мелодию для звонка (вкл. или выкл.)" />
 </PreferenceScreen>
