@@ -8,4 +8,10 @@
     <string name="wifi_summary">Вкл. или выкл. сеть WiFi</string>
     <string name="hints_title">Подсказки</string>
     <string name="hints_summary">Показывать подсказки</string>
+
+    <string name="pref_size">pref_size</string>
+    <string name="size_title">Размер шрифта</string>
+    <string name="size_summary">Устанавливает новый размер шрифта</string>
+    <string name="size_default">14</string>
+    <string name="size_dialog_title">Введите размер шрифта (от 10 до 32)</string>
 </resources>

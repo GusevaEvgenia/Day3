@@ -10,5 +10,11 @@
         android:title="@string/hints_title"
         android:summary="@string/hints_summary"
         android:defaultValue="true"/>
+    <EditTextPreference
+        android:key="@string/pref_size"
+        android:title="@string/size_title"
+        android:summary="@string/size_summary"
+        android:defaultValue="@string/size_default"
+        android:dialogTitle="@string/size_dialog_title"/>
 
 </PreferenceScreen>
