@@ -1,5 +1,7 @@
 package com.android_lessons.belkin.day3;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,14 +12,45 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
-    private int count = 0;
+    // это будет именем файла настроек
+    public static final String APP_PREFERENCES = "mysettings";
+    public static final String APP_PREFERENCES_COUNTER = "counter";
+
+    private SharedPreferences mSettings;
+
+    private int mCounter = 0;
+    TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+
+        mTextView = (TextView)findViewById(R.id.textView);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (mSettings.contains(APP_PREFERENCES_COUNTER)) {
+            // Получаем число из настроек
+            mCounter = mSettings.getInt(APP_PREFERENCES_COUNTER, 0);
+            // Выводим на экран данные из настроек
+            mTextView.setText("Я насчитал " + mCounter + " ворон");
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Запоминаем данные
+        SharedPreferences.Editor editor = mSettings.edit();
+        editor.putInt(APP_PREFERENCES_COUNTER, mCounter);
+        editor.apply();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -42,7 +75,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void onClick(View view) {
-        TextView textView = (TextView)findViewById(R.id.textView);
-        textView.setText("Уже " + ++count + " ворон");
+        mTextView.setText("Уже " + ++mCounter + " ворон");
     }
+
+
 }
