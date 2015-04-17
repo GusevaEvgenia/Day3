@@ -25,9 +25,15 @@
             android:showSilent="true"
             android:summary="Устанавливает мелодию для звонка (вкл. или выкл.)"
             android:title="Рингтон"/>
+        <PreferenceScreen
+            android:summary="Импортированная системная настройка"
+            android:title="Настройка через намерение" >
+            <intent android:action="android.settings.AIRPLANE_MODE_SETTINGS" />
+        </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="Настройки шрифта">
+        android:title="Настройки шрифта"
+        android:dependency="glad">
         <EditTextPreference
             android:defaultValue="@string/size_default"
             android:dialogTitle="@string/size_dialog_title"
