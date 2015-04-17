@@ -1,6 +1,7 @@
 package com.android_lessons.belkin.day3;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -68,6 +69,7 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            showSettings();
             return true;
         }
 
@@ -79,4 +81,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    public void showSettings(){
+        Intent i = new Intent(this, Prefs.class);
+        startActivity(i);
+    }
 }

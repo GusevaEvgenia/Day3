@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Day3</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="settings">Настройки</string>
     <string name="countButton">еще одна ворона</string>
+
+    <string name="wifi_title">Wi-Fi</string>
+    <string name="wifi_summary">Вкл. или выкл. сеть WiFi</string>
+    <string name="hints_title">Подсказки</string>
+    <string name="hints_summary">Показывать подсказки</string>
 </resources>
