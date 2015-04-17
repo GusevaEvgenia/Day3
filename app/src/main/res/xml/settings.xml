@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBoxPreference
-        android:key="wifi"
-        android:title="@string/wifi_title"
-        android:summary="@string/wifi_summary"
-        android:defaultValue="true"/>
-    <CheckBoxPreference
-        android:key="hints"
-        android:title="@string/hints_title"
-        android:summary="@string/hints_summary"
-        android:defaultValue="true"/>
-    <EditTextPreference
-        android:key="@string/pref_size"
-        android:title="@string/size_title"
-        android:summary="@string/size_summary"
-        android:defaultValue="@string/size_default"
-        android:dialogTitle="@string/size_dialog_title"/>
-    <ListPreference
-        android:key="@string/pref_style"
-        android:title="@string/style_title"
-        android:summary="@string/style_summary"
-        android:defaultValue="@string/style_default"
-        android:entries="@array/text_style"
-        android:entryValues="@array/text_style"
-        android:dialogTitle="@string/style_dialog_title"/>
+    <PreferenceCategory
+        android:title="Разное">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="wifi"
+            android:summary="@string/wifi_summary"
+            android:title="@string/wifi_title"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="hints"
+            android:summary="@string/hints_summary"
+            android:title="@string/hints_title"/>
+        <SwitchPreference
+            android:key="glad"
+            android:summaryOff="Вы уверены, что не будете гладить кота?"
+            android:summaryOn="Гладить кота?"
+            android:switchTextOff="Нет"
+            android:switchTextOn="Да"/>
 
-    <SwitchPreference
-        android:key="glad"
-        android:summaryOff="Вы уверены, что не будете гладить кота?"
-        android:summaryOn="Гладить кота?"
-        android:switchTextOff="Нет"
-        android:switchTextOn="Да" />
+        <RingtonePreference
+            android:key="setting_ringtone"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:summary="Устанавливает мелодию для звонка (вкл. или выкл.)"
+            android:title="Рингтон"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Настройки шрифта">
+        <EditTextPreference
+            android:defaultValue="@string/size_default"
+            android:dialogTitle="@string/size_dialog_title"
+            android:key="@string/pref_size"
+            android:summary="@string/size_summary"
+            android:title="@string/size_title"/>
+        <ListPreference
+            android:defaultValue="@string/style_default"
+            android:dialogTitle="@string/style_dialog_title"
+            android:entries="@array/text_style"
+            android:entryValues="@array/text_style"
+            android:key="@string/pref_style"
+            android:summary="@string/style_summary"
+            android:title="@string/style_title"/>
 
-    <RingtonePreference
-        android:key="setting_ringtone"
-        android:title="Рингтон"
-        android:showDefault="true"
-        android:showSilent="true"
-        android:summary="Устанавливает мелодию для звонка (вкл. или выкл.)" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
